@@ -72,22 +72,86 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.slack-node.toString">
-            function <span class="apidocSignatureSpan">slack-node.</span>toString
-            <span class="apidocSignatureSpan">()</span>
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed">
+            function <span class="apidocSignatureSpan">slack-node.</span>slack_seed
+            <span class="apidocSignatureSpan">(token, domain)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">slack-node.</span>slack_seed.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.slack-node.slack_seed">module slack-node.slack_seed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.slack_seed">
+            function <span class="apidocSignatureSpan">slack-node.</span>slack_seed
+            <span class="apidocSignatureSpan">(token, domain)</span>
             </a>
 
         </li>
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.slack-node.toString">module slack-node.toString</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.slack-node.slack_seed.prototype">module slack-node.slack_seed.prototype</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.slack-node.toString.toString">
-            function <span class="apidocSignatureSpan">slack-node.</span>toString
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.prototype._is_post_api">
+            function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>_is_post_api
+            <span class="apidocSignatureSpan">(method)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.prototype.api">
+            function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>api
+            <span class="apidocSignatureSpan">(method, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.prototype.composeUrl">
+            function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>composeUrl
             <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.prototype.detectEmoji">
+            function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>detectEmoji
+            <span class="apidocSignatureSpan">(emoji)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.prototype.setWebhook">
+            function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>setWebhook
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.slack-node.slack_seed.prototype.webhook">
+            function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>webhook
+            <span class="apidocSignatureSpan">(options, callback)</span>
             </a>
 
         </li>
@@ -126,14 +190,56 @@
 
 
     <h2>
-        <a href="#apidoc.element.slack-node.toString" id="apidoc.element.slack-node.toString">
-        function <span class="apidocSignatureSpan">slack-node.</span>toString
-        <span class="apidocSignatureSpan">()</span>
+        <a href="#apidoc.element.slack-node.slack_seed" id="apidoc.element.slack-node.slack_seed">
+        function <span class="apidocSignatureSpan">slack-node.</span>slack_seed
+        <span class="apidocSignatureSpan">(token, domain)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
+    <li>description and source-code<pre class="apidocCodePre">function Slack(token, domain) {
+  this.token = token;
+  this.domain = domain;
+  this.api = bind(this.api, this);
+  this.webhook = bind(this.webhook, this);
+  this.detectEmoji = bind(this.detectEmoji, this);
+  this.setWebhook = bind(this.setWebhook, this);
+  this.composeUrl = bind(this.composeUrl, this);
+  this.apiMode = this.domain == null;
+  this.url = this.composeUrl();
+  this.timeout = DEFAULT_TIMEOUT;
+  this.maxAttempts = DEFAULT_MAX_ATTEMPTS;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.slack-node.slack_seed" id="apidoc.module.slack-node.slack_seed">module slack-node.slack_seed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.slack-node.slack_seed.slack_seed" id="apidoc.element.slack-node.slack_seed.slack_seed">
+        function <span class="apidocSignatureSpan">slack-node.</span>slack_seed
+        <span class="apidocSignatureSpan">(token, domain)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Slack(token, domain) {
+  this.token = token;
+  this.domain = domain;
+  this.api = bind(this.api, this);
+  this.webhook = bind(this.webhook, this);
+  this.detectEmoji = bind(this.detectEmoji, this);
+  this.setWebhook = bind(this.setWebhook, this);
+  this.composeUrl = bind(this.composeUrl, this);
+  this.apiMode = this.domain == null;
+  this.url = this.composeUrl();
+  this.timeout = DEFAULT_TIMEOUT;
+  this.maxAttempts = DEFAULT_MAX_ATTEMPTS;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -142,18 +248,272 @@
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.slack-node.toString" id="apidoc.module.slack-node.toString">module slack-node.toString</a></h1>
+<h1><a href="#apidoc.module.slack-node.slack_seed.prototype" id="apidoc.module.slack-node.slack_seed.prototype">module slack-node.slack_seed.prototype</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.slack-node.toString.toString" id="apidoc.element.slack-node.toString.toString">
-        function <span class="apidocSignatureSpan">slack-node.</span>toString
+        <a href="#apidoc.element.slack-node.slack_seed.prototype._is_post_api" id="apidoc.element.slack-node.slack_seed.prototype._is_post_api">
+        function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>_is_post_api
+        <span class="apidocSignatureSpan">(method)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_is_post_api = function (method) {
+  return method === &#x22;files.upload&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+url = this.url + method;
+request_arg = {
+  url: this.url + method,
+  timeout: this.timeout,
+  maxAttempts: this.maxAttempts,
+  retryDelay: 0
+};
+if (this.<span class="apidocCodeKeywordSpan">_is_post_api</span>(method)) {
+  request_arg.method = &#x22;POST&#x22;;
+  request_arg.formData = options;
+} else {
+  request_arg.method = &#x22;GET&#x22;;
+  request_arg.qs = options;
+  request_arg.useQuerystring = true;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slack-node.slack_seed.prototype.api" id="apidoc.element.slack-node.slack_seed.prototype.api">
+        function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>api
+        <span class="apidocSignatureSpan">(method, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">api = function (method, options, callback) {
+  var request_arg, url;
+  if (options == null) {
+    options = {};
+  }
+  if (typeof options === &#x22;function&#x22;) {
+    callback = options;
+    options = {};
+  }
+  options.token = this.token;
+  url = this.url + method;
+  request_arg = {
+    url: this.url + method,
+    timeout: this.timeout,
+    maxAttempts: this.maxAttempts,
+    retryDelay: 0
+  };
+  if (this._is_post_api(method)) {
+    request_arg.method = &#x22;POST&#x22;;
+    request_arg.formData = options;
+  } else {
+    request_arg.method = &#x22;GET&#x22;;
+    request_arg.qs = options;
+    request_arg.useQuerystring = true;
+  }
+  request(request_arg, function(err, body, response) {
+    var error, parsedResponse;
+    if (err) {
+      return callback(err, {
+        status: &#x22;fail&#x22;,
+        response: response
+      });
+    }
+    try {
+      parsedResponse = JSON.parse(response);
+    } catch (error) {
+      err = error;
+      err = new Error(&#x22;Couldn&#x27;t parse Slack API response as JSON:\n&#x22; + response);
+      return typeof callback === &#x22;function&#x22; ? callback(err) : void 0;
+    }
+    if (typeof callback === &#x22;function&#x22;) {
+      callback(err, parsedResponse);
+    }
+  });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var Slack = require(&#x27;slack-node&#x27;);
+apiToken = &#x22;-- api token --&#x22;;
+
+slack = new Slack(apiToken);
+
+slack.<span class="apidocCodeKeywordSpan">api</span>(&#x22;users.list&#x22;, function(err, response) {
+  console.log(response);
+});
+
+slack.api(&#x27;chat.postMessage&#x27;, {
+  text:&#x27;hello from nodejs&#x27;,
+  channel:&#x27;#general&#x27;
+}, function(err, response){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slack-node.slack_seed.prototype.composeUrl" id="apidoc.element.slack-node.slack_seed.prototype.composeUrl">
+        function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>composeUrl
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>description and source-code<pre class="apidocCodePre">composeUrl = function () {
+  return &#x22;https://slack.com/api/&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  this.domain = domain;
+  this.api = bind(this.api, this);
+  this.webhook = bind(this.webhook, this);
+  this.detectEmoji = bind(this.detectEmoji, this);
+  this.setWebhook = bind(this.setWebhook, this);
+  this.composeUrl = bind(this.composeUrl, this);
+  this.apiMode = this.domain == null;
+  this.url = this.<span class="apidocCodeKeywordSpan">composeUrl</span>();
+  this.timeout = DEFAULT_TIMEOUT;
+  this.maxAttempts = DEFAULT_MAX_ATTEMPTS;
+}
+
+Slack.prototype.composeUrl = function() {
+  return &#x22;https://slack.com/api/&#x22;;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slack-node.slack_seed.prototype.detectEmoji" id="apidoc.element.slack-node.slack_seed.prototype.detectEmoji">
+        function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>detectEmoji
+        <span class="apidocSignatureSpan">(emoji)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detectEmoji = function (emoji) {
+  var obj;
+  obj = {};
+  if (!emoji) {
+    obj.key = &#x22;icon_emoji&#x22;;
+    obj.val = &#x22;&#x22;;
+    return obj;
+  }
+  obj.key = emoji.match(/^http/) ? &#x22;icon_url&#x22; : &#x22;icon_emoji&#x22;;
+  obj.val = emoji;
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  obj.key = emoji.match(/^http/) ? &#x22;icon_url&#x22; : &#x22;icon_emoji&#x22;;
+  obj.val = emoji;
+  return obj;
+};
+
+Slack.prototype.webhook = function(options, callback) {
+  var emoji, payload;
+  emoji = this.<span class="apidocCodeKeywordSpan">detectEmoji</span>(options.icon_emoji);
+  payload = {
+    response_type: options.response_type || &#x27;ephemeral&#x27;,
+    channel: options.channel,
+    text: options.text,
+    username: options.username,
+    attachments: options.attachments,
+    link_names: options.link_names || 0
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slack-node.slack_seed.prototype.setWebhook" id="apidoc.element.slack-node.slack_seed.prototype.setWebhook">
+        function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>setWebhook
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setWebhook = function (url) {
+  this.webhookUrl = url;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var Slack = require(&#x27;slack-node&#x27;);
+
+webhookUri = &#x22;__uri___&#x22;;
+
+slack = new Slack();
+slack.<span class="apidocCodeKeywordSpan">setWebhook</span>(webhookUri);
+
+slack.webhook({
+channel: &#x22;#general&#x22;,
+username: &#x22;webhookbot&#x22;,
+text: &#x22;This is posted to #general and comes from a bot named webhookbot.&#x22;
+}, function(err, response) {
+console.log(response);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.slack-node.slack_seed.prototype.webhook" id="apidoc.element.slack-node.slack_seed.prototype.webhook">
+        function <span class="apidocSignatureSpan">slack-node.slack_seed.prototype.</span>webhook
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">webhook = function (options, callback) {
+  var emoji, payload;
+  emoji = this.detectEmoji(options.icon_emoji);
+  payload = {
+    response_type: options.response_type || &#x27;ephemeral&#x27;,
+    channel: options.channel,
+    text: options.text,
+    username: options.username,
+    attachments: options.attachments,
+    link_names: options.link_names || 0
+  };
+  payload[emoji.key] = emoji.val;
+  return request({
+    method: &#x22;POST&#x22;,
+    url: this.webhookUrl,
+    body: JSON.stringify(payload),
+    timeout: this.timeout,
+    maxAttempts: this.maxAttempts,
+    retryDelay: 0
+  }, function(err, body, response) {
+    if (err != null) {
+      return callback(err);
+    }
+    return callback(null, {
+      status: err || response !== &#x22;ok&#x22; ? &#x22;fail&#x22; : &#x22;ok&#x22;,
+      statusCode: body.statusCode,
+      headers: body.headers,
+      response: response
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Slack = require(&#x27;slack-node&#x27;);
+
+webhookUri = &#x22;__uri___&#x22;;
+
+slack = new Slack();
+slack.setWebhook(webhookUri);
+
+slack.<span class="apidocCodeKeywordSpan">webhook</span>({
+  channel: &#x22;#general&#x22;,
+  username: &#x22;webhookbot&#x22;,
+  text: &#x22;This is posted to #general and comes from a bot named webhookbot.&#x22;
+}, function(err, response) {
+  console.log(response);
+});
+```
+...</pre></li>
     </ul>
 
 

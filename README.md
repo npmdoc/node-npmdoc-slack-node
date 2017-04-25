@@ -1,4 +1,7 @@
-# api documentation for  [slack-node (v0.1.8)](https://github.com/clonn/slack-node-sdk#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-slack-node.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-slack-node) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slack-node.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slack-node)
+# npmdoc-slack-node
+
+#### basic api documentation for  [slack-node (v0.1.8)](https://github.com/clonn/slack-node-sdk#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-slack-node.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-slack-node) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-slack-node.svg)](https://travis-ci.org/npmdoc/node-npmdoc-slack-node)
+
 #### Slack API library for node
 
 [![NPM](https://nodei.co/npm/slack-node.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/slack-node)
@@ -66,7 +69,8 @@
         "start": "coffee index.coffee",
         "test": "mocha ./lib/test"
     },
-    "version": "0.1.8"
+    "version": "0.1.8",
+    "bin": {}
 }
 ```
 
